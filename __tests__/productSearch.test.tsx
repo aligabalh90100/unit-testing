@@ -1,4 +1,4 @@
-import { mockMMKV, mockSet } from "@/__mocks__/react-native-mmkv.mock";
+import { mockMMKV, setMock } from "@/__mocks__/react-native-mmkv.mock";
 import ProductSearch from "@/app/productSearch";
 import {
   cleanup,
@@ -103,7 +103,7 @@ test("stores product in MMKV", async () => {
 
   await screen.findByText("Test Product");
 
-  expect(mockSet).toHaveBeenCalledWith(
+  expect(setMock).toHaveBeenCalledWith(
     "lastProduct",
     JSON.stringify({
       title: "Test Product",
