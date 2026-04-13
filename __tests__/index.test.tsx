@@ -1,5 +1,5 @@
 import { mockMMKV } from "@/__mocks__/react-native-mmkv.mock";
-import Index from "@/app/index";
+import Index from "@/app";
 import { render, screen, userEvent } from "@testing-library/react-native";
 
 // to mock function that needs native module jest must take inline function

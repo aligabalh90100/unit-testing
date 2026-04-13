@@ -1,11 +1,13 @@
+export const removeMock = jest.fn();
+export const setMock = jest.fn();
 export const mockMMKV = {
   createMMKV: () => ({
-    set: jest.fn(),
+    set: setMock,
     getBoolean: jest.fn(),
     getString: jest.fn(),
     getNumber: jest.fn(),
     getBuffer: jest.fn(),
-    delete: jest.fn(),
+    remove: removeMock,
     clearAll: jest.fn(),
     contains: jest.fn(),
     getAllKeys: jest.fn(),

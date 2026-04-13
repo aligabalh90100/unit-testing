@@ -1,5 +1,6 @@
+import { router } from "expo-router";
 import { useMemo, useState } from "react";
-import { Text, TextInput, View } from "react-native";
+import { Button, Text, TextInput, View } from "react-native";
 import { createMMKV } from "react-native-mmkv";
 export const storage = createMMKV();
 
@@ -32,7 +33,23 @@ export default function Index() {
     return { error: null, value: numPrice };
   }, [price, code]);
   return (
-    <View>
+    <View style={{ gap: 20 }}>
+      <Button
+        title="Go to Tip Calculator"
+        onPress={() => router.push("/tipCalculator")}
+      />
+      <Button
+        title="Go to Product Search"
+        onPress={() => router.push("/productSearch")}
+      />
+      <Button
+        title="Go to Login Screen"
+        onPress={() => router.push("/loginScreen")}
+      />
+      <Button
+        title="Go to Products Screen"
+        onPress={() => router.push("/productsScreen")}
+      />
       <TextInput
         placeholder="Enter Price"
         onChangeText={setPrice}
