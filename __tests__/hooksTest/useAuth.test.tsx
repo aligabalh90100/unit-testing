@@ -76,6 +76,7 @@ test("Login failed", async () => {
   );
 
   const { result } = renderHook(() => useAuth());
+
   act(() => {
     result.current.login("ali@gmail.com", "123456");
   });
