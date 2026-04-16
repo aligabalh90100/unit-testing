@@ -7,7 +7,7 @@ import {
   userEvent,
 } from "@testing-library/react-native";
 
-// user getBy for elements that already exist in screen
+// use getBy for elements that already exist in screen
 // findBy for elements that will appear later
 // queryBy for elements may not exist
 jest.mock("react-native-mmkv", () => mockMMKV);
